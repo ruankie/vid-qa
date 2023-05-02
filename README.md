@@ -1,37 +1,27 @@
-[![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/conda-py-minimal-template)](https://github.com/ruankie/conda-py-minimal-template)
-[![GitHub file size in bytes](https://img.shields.io/github/size/ruankie/conda-py-minimal-template)](https://github.com/ruankie/conda-py-minimal-template)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/vid-qa)](https://github.com/ruankie/vid-qa)
 
-# conda-py-minimal-template
-Minimal template with the essentials for quickly setting up new python projects. Includes a simple folder structure and a conda environment for isolated dependency management.
+[![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/langchain-play)](https://github.com/ruankie/langchain-play)
+
+# 🎥🗨️ vid-qa
+VidQA is an AutoGPT app that summarises and answers questions about arbitrary YouTube videos using LangChain and LLMs.
+
+> 🏗️ Under construction. More coming soon...
+> 💡 The main idea for this app came from [one of Dave Ebbelaar's YouTube videos](https://www.youtube.com/watch?v=NYSWn1ipbgg). Check out [his awesome channel](https://www.youtube.com/@daveebbelaar).
 
 ## Usage
-1. Start a new repo using this template
-2. Update your `LICENSE` file.
-3. Update your `README.md` file.
-4. Set up and activate conda environment
-   1. Rename your conda environment in the `./conda.yml` file.
-   2. Add/change any dependencies and their versions in the `./conda.yml` file.
-   3. Set up your conda environment and activate it by running:
-        ```bash
-        conda env create -f conda.yml
-        conda activate <your-env-name>
-        ```
-5. Add your own scripts in `./src/`
-6. Add your own notebooks in `./notebooks/`
-7. Add your own data in `./data/`
+> TODO: Add Streamlit app link
 
-This template creates the following folder structure:
+1. Set up your API keys in a file called `.env` (see `.env.example` for an example)
+2. Set up and activate conda environment
+    ```bash
+    conda env create -f conda.yml
+    conda activate vidqa
+    ```
+3. Check out the examples:
+   - Notebooks at `./notebooks/`
+   - Scripts at `./src/`
 
-```
-<your-repo-name>
-├── LICENSE
-├── README.md
-├── conda.yml
-├── data
-├── notebooks
-│   └── example.ipynb
-├── setup.py
-└── src
-    ├── __init__.py
-    └── utils.py
-```
+## Useful Resources
+- https://www.youtube.com/watch?v=NYSWn1ipbgg
+- https://platform.openai.com/docs/api-reference
+- https://python.langchain.com/en/latest/index.html
