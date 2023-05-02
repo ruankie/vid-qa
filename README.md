@@ -1,7 +1,5 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/vid-qa)](https://github.com/ruankie/vid-qa)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/langchain-play)](https://github.com/ruankie/langchain-play)
-
 # 🎥🗨️ vid-qa
 VidQA is an AutoGPT app that summarises and answers questions about arbitrary YouTube videos using LangChain and LLMs.
 
