@@ -6,6 +6,9 @@ dependencies:
     - jupyterlab==3.4.*
     - langchain==0.0.153
     - openai==0.27.*
+    - youtube-transcript-api==0.6.*
+    - tiktoken==0.3.*
+    - faiss-cpu==1.7.*
     - python-dotenv==1.0.*
     - black==23.3.*
     - pylint==2.17.*
