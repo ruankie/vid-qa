@@ -1,10 +1,12 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ruankie/vid-qa)](https://github.com/ruankie/vid-qa)
 
-# 🎥🗨️ vid-qa
+# 🎥🗨️ VidAQ
 VidQA is an AutoGPT app that summarises and answers questions about arbitrary YouTube videos using LangChain and LLMs.
 
 > 🏗️ Under construction. More coming soon...
-> 💡 The main idea for this app came from [one of Dave Ebbelaar's YouTube videos](https://www.youtube.com/watch?v=NYSWn1ipbgg). Check out [his awesome channel](https://www.youtube.com/@daveebbelaar).
+
+
+> 💡 The main idea for this app came from a [YouTube video](https://www.youtube.com/watch?v=NYSWn1ipbgg) by [Dave Ebbelaar](https://www.youtube.com/@daveebbelaar).
 
 ## Usage
 > TODO: Add Streamlit app link
