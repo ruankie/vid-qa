@@ -18,7 +18,13 @@ def create_db_from_youtube_video_url(video_url):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     docs = text_splitter.split_documents(transcript)
 
-    db = FAISS.from_documents(docs, OpenAIEmbeddings())
+    embedding = OpenAIEmbeddings(
+        model="text-embedding-ada-002",
+        chunk_size=1,
+        max_retries=10
+    )
+
+    db = FAISS.from_documents(docs, embedding)
     return db
 
 
