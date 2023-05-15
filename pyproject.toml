@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "vid-qa"
+version = "0.1.0"
+description = "VidQA is an AutoGPT app that summarises and answers questions about arbitrary YouTube videos using LangChain and LLMs."
+authors = ["Ruan Pretorius"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterlab = "^3.6.3"
+python-dotenv = "^1.0.0"
+openai = "^0.27.6"
+langchain = "^0.0.170"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+black = "^23.3.0"
+pylint = "^2.17.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
