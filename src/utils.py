@@ -11,7 +11,7 @@ from langchain.prompts.chat import (
 )
 
 
-def create_db_from_youtube_video_url(video_url):
+def create_db_from_youtube_video_url(video_url, model_name="text-embedding-ada-002"):
     loader = YoutubeLoader.from_youtube_url(video_url)
     transcript = loader.load()
 
@@ -19,7 +19,7 @@ def create_db_from_youtube_video_url(video_url):
     docs = text_splitter.split_documents(transcript)
 
     embedding = OpenAIEmbeddings(
-        model="text-embedding-ada-002",
+        model=model_name,
         chunk_size=1,
         max_retries=10
     )
@@ -28,7 +28,7 @@ def create_db_from_youtube_video_url(video_url):
     return db
 
 
-def get_response_from_query(db, query, k=4):
+def get_response_from_query(db, query, k=4, model_name="gpt-3.5-turbo"):
     """
     gpt-3.5-turbo can handle up to 4097 tokens. Setting the chunksize to 1000 and k to 4 maximizes
     the number of tokens to analyze.
@@ -37,7 +37,7 @@ def get_response_from_query(db, query, k=4):
     docs = db.similarity_search(query, k=k)
     docs_page_content = " ".join([d.page_content for d in docs])
 
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2)
+    chat = ChatOpenAI(model_name=model_name, temperature=0.2)
 
     # Template to use for the system message prompt
     template = """
