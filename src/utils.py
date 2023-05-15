@@ -11,7 +11,7 @@ from langchain.prompts.chat import (
 )
 
 
-def create_db_from_youtube_video_url(video_url, model_name="text-embedding-ada-002"):
+def create_db_from_youtube_video_url(video_url, model_name="text-embedding-ada-002", deployment_name="text-embedding-ada-002"):
     loader = YoutubeLoader.from_youtube_url(video_url)
     transcript = loader.load()
 
@@ -20,8 +20,9 @@ def create_db_from_youtube_video_url(video_url, model_name="text-embedding-ada-0
 
     embedding = OpenAIEmbeddings(
         model=model_name,
-        chunk_size=1,
-        max_retries=10
+        deployment=deployment_name,
+        # chunk_size=1,
+        # max_retries=10
     )
 
     db = FAISS.from_documents(docs, embedding)
